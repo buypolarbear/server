@@ -83,7 +83,9 @@ export default {
 		});
 		this.$store.dispatch('getPasswordPolicyMinLength');
 	},
-	mounted() {
+	created() {
+		// init the OCA.Settings.UserList object
+		// and add the registerAction method
 		Object.assign(OCA, {
 			Settings: {
 				UserList: {
